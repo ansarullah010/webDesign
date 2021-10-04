@@ -1,0 +1,602 @@
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+
+ul{
+    list-style: none;
+}
+/* menu part CSS starts */
+.nav_custom{
+    /* background: rgba(53, 43, 89, 0.5); */
+    transition: 1s all ease;
+}
+.nav-scroll-bg{
+    background-color: rgba(1, 46, 43, 0.8) ;
+}
+.navbar-light .navbar-nav .active>.nav-link  {
+    color: #00e0d0;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light   {
+	color: #00e0d0;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: #00e0d0 ;
+}
+.navbar{
+    position:fixed;
+    z-index: 9999;
+    width: 100%;
+}
+/* menu part CSS ends */
+/* banner part CSS starts */
+
+#banner-part{
+    background: url(image/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#banner-part::before{  
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(53, 43, 89, 0.7);
+}
+/* উপরের স্যুডো এলিমেন্টে before এর বদলে after-ও ব্যবহার করা যায়, কিন্তু সেক্ষেত্রে নিচের banner-text-এর position আর z-index লিখাটা active করে দিতে হবে */
+.banner-text{
+    position: relative;
+    z-index: 99;
+    padding-top: 230px;
+    padding-bottom: 205px;
+}
+.banner-text h2 {
+    text-transform: capitalize;
+ font-size: 32px;
+ font-family: 'Playfair Display', serif;
+ font-weight: 700;
+ color: #ffffff;
+ position: relative;
+}
+.banner-text h2::before{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 1px;
+    background: #00e0d0;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+}
+.banner-text p {
+ font-size: 14px;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 300;
+ color: #ffffff;
+ padding: 60px 115px 53px 115px;
+}
+.banner-text a {
+    border: 1px solid #00e0d0;
+    text-decoration: none ;
+    /* text-decoration-color: #e9102d; */
+    padding: 15px 30px;
+    color: #00e0d0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* slick slider starts */
+.banner-slider{
+    position: relative;
+}
+.slick-dots{
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+}
+.slick-dots li{
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+
+}
+.slick-dots li button{
+    color:transparent;
+    width: 15px;
+    height: 15px;
+    line-height: 17px;
+    border-radius: 50%;
+    border: none;
+    background: #00e0d0;
+    opacity: 0;
+    transition: 0.5s all ease;
+    cursor: pointer;
+}
+.slick-dots li.slick-active button{
+    opacity: 1;
+}
+button:focus {
+    outline: 0px dotted;
+}
+/* slick slider ends */
+/* banner part CSS ends */
+
+/* about part CSS starts */
+#about-part{
+    padding: 70px;
+}
+.about-text h2{
+    color: #413d4b;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    margin-bottom: 0 !important;
+
+}
+.about-text p{
+    color: #716e78;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    margin-bottom: 0 !important;
+
+}
+.about-text a {
+    border: 1px solid #00e0d0;
+    text-decoration: none ;
+    /* text-decoration-color: #e9102d; */
+    padding: 15px 30px;
+    color: #00e0d0;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
+}
+/* about part CSS ends */
+/* video part CSS starts */
+#video-part{
+    background: url(image/video_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 200px 0;
+}
+#video-part::before{
+    position:absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(53, 43, 89, 0.7);
+}
+/* .video-icon{ এই লিখাটা দিতে হয় যখন কোনো কন্টেন্ট কিছুর নিচ থেকে উপরে ভাসিয়ে আনার প্রয়োজন হয়
+    z-index: 100;
+    position: relative;
+} */
+.icon-custom{
+    color: #ffffff;;
+font-size: 45px;
+width:70px;
+height:70px;
+line-height:70px;
+border-radius: 50%;
+border: 3px solid #ffffff;
+text-align: center;
+cursor: pointer;
+
+}
+/* .video-icon img{
+    width: 50%;
+} */
+.video-icon h3{
+color: #ffffff;
+font-family: 'Roboto', sans-serif;
+font-size: 16px;
+font-weight: 500;
+padding-top: 34px;
+}
+
+/* video part CSS ends */
+/* expertise(service part) starts */
+#expertise{
+    padding: 70px 0;
+}
+.expertise-heading h2{
+    color: #413d4b;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+.expertise-heading p{
+    color: #78767c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+.expertise-heading p::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #c6c4c9;
+    left: 50%;
+    top: 37px;
+    transform: translateX(-50%);
+}
+.expert-details{
+    padding-top: 80px ;
+}
+.expert-details img{
+    padding-bottom: 35px;
+    cursor: pointer;
+}
+.expert-details h5{
+    color: #413d4b;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+padding-bottom: 25px;
+margin: 0;
+}
+.expert-details p{
+    color: #666666;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 52px;
+    line-height: 24px;
+}
+/* expertise(service part) ends */
+/* team part CSS starts */
+#team{
+    background: url(image/team_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 70px 0;
+}
+#team::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(53, 43, 89, 0.7);
+}
+.team-heading{
+    color:#ffff;
+}
+.team-heading h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+.team-heading p{
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+.team-heading p::after{
+    position: absolute;
+    content:'';
+    width: 50px;
+    height: 2px;
+   background:#8b7db8;
+   top: 40px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.team-member{
+    text-align: center;
+    color: #ffff;
+}
+.member-card{
+    background: none;
+    border: 2px solid #79778d;
+}
+.team-member h5{
+    font-family: 'Roboto', sans-serif;
+    
+    font-size: 14px;
+    margin: 0;
+}
+.team-member p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+}
+.team-footer p{
+    color: #ffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+.team-footer a {
+    border: 1px solid #00e0d0;
+    text-decoration: none ;
+    /* text-decoration-color: #e9102d; */
+    padding: 15px 30px;
+    color: #00e0d0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.member-slider{
+    z-index: 100;
+    position: relative;
+}
+.member-slider .slick-dots{
+    position: absolute;
+    bottom: -50px;
+}
+/* team part CSS ends */
+/* project(work) part CSS starts */
+#project{
+    padding: 70px 0;
+}
+.project-text-left h3{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #413d4b;
+    text-transform: uppercase;
+    padding-bottom: 70px;
+}
+.project-text-right p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    text-align: right;
+    padding-bottom: 70px;
+}
+.project-button{
+    padding-top: 70px;
+}
+.project-button a{
+    border: 1px solid #00e0d0;
+    text-decoration: none ;
+    /* text-decoration-color: #e9102d; */
+    padding: 15px 30px;
+    color: #00e0d0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* project(work) part CSS ends */
+/* people's comment CSS part starts */
+#people-comment{
+    background: url(image/team_slider_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0;
+    position: relative;
+}
+#people-comment::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(53, 43, 89, 0.7);
+}
+.slider-comment-text{
+    /* position:ralative; */
+    /* z-index:100; */
+ color: #ffff;
+}
+.slider-comment-text i{
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+.slider-comment-text p{
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    line-height: 25px;
+    padding: 0 94px;
+    padding-bottom: 50px;
+}
+.slider-comment-text h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.slider-comment-text h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+.slider-comment-image img{
+    width: 80px;    
+    height: 80px;
+    border-radius: 50%;
+}
+.img-slide-custom{
+    width: 500px;
+    margin: 0 auto;
+}
+.custom-left-arrow {
+    position: absolute;
+    z-index: 100;
+    color: #ffff;
+    font-size: 43px;
+    opacity: 0.8;
+    top: 80%;
+    left: 29%;
+    cursor: pointer;
+}
+.custom-right-arrow {
+    position: absolute;
+    z-index: 100;
+    color: #ffffff;
+    font-size: 43px;
+    opacity: 0.8;
+    top: 80%;
+    right: 386px;
+    cursor: pointer;
+}
+.slick-center .slider-comment-image img{
+    border: 4px solid #00e0d0;
+    transform:rotate(360deg);
+    transition: 1s;
+}
+/* people's comment CSS part ends */
+/* contact part CSS starts */
+#contact{
+    padding: 70px 0;
+}
+.contact-left-part h3, .contact-right-part h3{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #413d4b;
+    padding-bottom: 35px;
+}
+.contact-left-part a{
+    border: 1px solid #00e0d0;
+    text-decoration: none ;
+    /* text-decoration-color: #e9102d; */
+    padding: 10px 30px;
+    color: #00e0d0;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+}
+/* contact part CSS ends */
+/* footer part css starts */
+#footer{
+    padding: 70px 0;
+    color: #ffff;
+    background: url(image/footer_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#footer::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(53, 43, 89, 0.7);
+}
+.footer-top-left img{
+   padding-bottom: 30px;
+}
+.footer-top-left p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300; 
+    line-height: 28px;
+    padding: 0 80px 0 0;
+}
+.footer-top-middle h5, .footer-top-right h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+.footer-top-middle p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px;
+}
+.footer-top-middle i{
+    margin-right: 10px;
+}
+.footer-top-right input{
+    background: none;
+    border-radius: 0;
+}
+.custom-form{
+    margin-left: 0 !important;
+}
+.btn-custom{
+    background-color: rgba(156, 147, 173, 0.7);
+    padding: 6px 25px;
+    border-radius: 0;
+    opacity: 0.8;
+}
+.btn-custom i{
+    font-size: 20px;
+}
+.footer-top-right ul {
+    padding: 9px 17px;
+}
+.footer-top-right ul li{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ffff;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+}
+.footer-top-right ul li a i{
+    color: #ffff;
+}
+.footer-bottom-left ul, .footer-bottom-right p {
+    padding: 0;
+    margin-top: 70px;
+    padding-right: 46px;
+}
+.footer-bottom-left ul li{
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+}
+.footer-bottom-left ul li a{
+    color: #ffff;
+    text-decoration: none;
+}
+
+/* footer part css ends */
+
+
+
+
+/*     font-family: 'Playfair Display', serif;
+
+    font-family: 'Roboto', sans-serif;
+
+ */
